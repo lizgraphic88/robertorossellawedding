@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roberto &amp; Rossella · 27 Settembre 2026</title>
+  <meta name="description" content="Partecipazione digitale di Roberto e Rossella · 27 Settembre 2026" />
+
+  <!-- Fonts: Cormorant Garamond (display) + Jost (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== INTRO: BUSTA ===================== -->
+  <section class="intro" id="intro" aria-label="Apri invito">
+    <div class="intro__hint" aria-hidden="true">Tocca il sigillo</div>
+
+    <button class="envelope" id="openInvite" type="button" aria-label="Apri la partecipazione">
+      <img class="envelope__back"  src="assets/envelope-back.svg"  alt="" />
+      <img class="envelope__flap" src="assets/envelope_flap.svg"  alt="" />
+      <img class="envelope__seal" src="assets/sigillo.svg"         alt="Sigillo" />
+    </button>
+
+    <!-- linee decorative angoli -->
+    <div class="corner corner--tl" aria-hidden="true"></div>
+    <div class="corner corner--tr" aria-hidden="true"></div>
+    <div class="corner corner--bl" aria-hidden="true"></div>
+    <div class="corner corner--br" aria-hidden="true"></div>
+  </section>
+
+
+  <!-- ===================== LANDING ===================== -->
+  <main class="landing" id="landing" aria-hidden="true">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-paper" aria-hidden="true">
+        <img src="assets/paper.svg" alt="" />
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__pre reveal-item">We are getting married</p>
+        <img
+          class="hero__invite reveal-item"
+          src="assets/robertorossellasposi.svg"
+          alt="Partecipazione matrimonio Roberto e Rossella"
+        />
+        <p class="hero__date reveal-item">27 · IX · 2026</p>
+        <div class="hero__divider reveal-item" aria-hidden="true">
+          <span></span><span class="diamond">◆</span><span></span>
+        </div>
+        <p class="hero__scroll-hint reveal-item" aria-hidden="true">Scorri per scoprire</p>
+      </div>
+    </section>
+
+
+    <!-- STORIA -->
+    <section class="section section--story" id="storia">
+      <div class="section__inner">
+        <div class="section__label reveal-item">La nostra storia</div>
+        <h2 class="section__title reveal-item">
+          Tutto è iniziato<br><em>per caso</em>
+        </h2>
+        <p class="section__text reveal-item">
+          Ci siamo incontrati per la prima volta in una sera d'autunno, in un piccolo locale
+          che entrambi frequentavamo senza saperlo. Da quella sera non ci siamo più lasciati.
+          Abbiamo viaggiato, riso, pianto e costruito qualcosa di bellissimo insieme.
+          Ora siamo pronti a fare il passo più importante della nostra vita.
+        </p>
+        <p class="section__text reveal-item">
+          <!--
+            ✏️ Modifica questo testo con la vostra storia vera.
+          -->
+          Questo è il momento in cui vogliamo condividere la nostra gioia con le persone
+          che amiamo di più. Vogliamo che tu sia lì, con noi, a festeggiare.
+        </p>
+      </div>
+
+      <!-- elemento decorativo laterale -->
+      <div class="story__deco reveal-item" aria-hidden="true">
+        <svg viewBox="0 0 2 120" xmlns="http://www.w3.org/2000/svg">
+          <line x1="1" y1="0" x2="1" y2="120" stroke="currentColor" stroke-width="0.5" stroke-dasharray="4 4"/>
+        </svg>
+      </div>
+    </section>
+
+
+    <!-- EVENTO -->
+    <section class="section section--event" id="evento">
+      <div class="section__inner">
+        <div class="section__label reveal-item">Il matrimonio</div>
+        <h2 class="section__title reveal-item">Unisciti a noi</h2>
+
+        <div class="event__grid">
+          <!-- DATA -->
+          <div class="event__card reveal-item">
+            <div class="event__card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <p class="event__card-label">Data</p>
+            <p class="event__card-value">27 Settembre 2026</p>
+            <p class="event__card-sub">Domenica</p>
+          </div>
+
+          <!-- ORA -->
+          <div class="event__card reveal-item">
+            <div class="event__card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <circle cx="12" cy="12" r="9"/>
+                <polyline points="12 7 12 12 15 15"/>
+              </svg>
+            </div>
+            <p class="event__card-label">Orario</p>
+            <p class="event__card-value">ore 11:00</p>
+            <p class="event__card-sub">Cerimonia</p>
+          </div>
+
+          <!-- LUOGO -->
+          <div class="event__card reveal-item">
+            <div class="event__card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+            </div>
+            <p class="event__card-label">Luogo</p>
+            <!--
+              ✏️ Sostituisci con il nome della tua location
+            -->
+            <p class="event__card-value">Villa dei Sogni</p>
+            <p class="event__card-sub">Via Roma 1, Città</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- COUNTDOWN -->
+    <section class="section section--countdown" id="countdown-section">
+      <div class="section__inner">
+        <div class="section__label reveal-item">Manca ancora</div>
+        <h2 class="section__title reveal-item">Il gran giorno si avvicina</h2>
+
+        <div class="countdown reveal-item" id="countdown" role="timer" aria-live="polite">
+          <div class="countdown__unit">
+            <span class="countdown__num" id="cd-days">--</span>
+            <span class="countdown__label">Giorni</span>
+          </div>
+          <div class="countdown__sep" aria-hidden="true">·</div>
+          <div class="countdown__unit">
+            <span class="countdown__num" id="cd-hours">--</span>
+            <span class="countdown__label">Ore</span>
+          </div>
+          <div class="countdown__sep" aria-hidden="true">·</div>
+          <div class="countdown__unit">
+            <span class="countdown__num" id="cd-min">--</span>
+            <span class="countdown__label">Minuti</span>
+          </div>
+          <div class="countdown__sep" aria-hidden="true">·</div>
+          <div class="countdown__unit">
+            <span class="countdown__num" id="cd-sec">--</span>
+            <span class="countdown__label">Secondi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- watermark decorativo -->
+      <div class="countdown__deco reveal-item" aria-hidden="true">2026</div>
+    </section>
+
+
+    <!-- RSVP -->
+    <section class="section section--rsvp" id="rsvp">
+      <div class="section__inner">
+        <div class="section__label reveal-item">Partecipa</div>
+        <h2 class="section__title reveal-item">Sarai con noi?</h2>
+        <p class="section__text reveal-item">
+          Ci farebbe enormemente piacere averti al nostro fianco.<br>
+          <!--
+            ✏️ Specifica la data entro cui ricevere le conferme
+          -->
+          Ti chiediamo gentilmente di confermare la tua presenza entro il <strong>31 luglio 2026</strong>.
+        </p>
+
+        <div class="rsvp__actions reveal-item">
+          <!--
+            ✏️ Sostituisci href="#" con il link al tuo form Google / Typeform / etc.
+          -->
+          <a class="btn btn--primary" href="#" target="_blank" rel="noopener">
+            Conferma la tua presenza
+          </a>
+          <!--
+            ✏️ Sostituisci href="#" con il link a Google Maps / Waze
+          -->
+          <a class="btn btn--outline" href="#" target="_blank" rel="noopener">
+            Apri la mappa
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__names">Roberto &amp; Rossella</p>
+        <p class="footer__date">27 · IX · 2026</p>
+        <div class="footer__divider" aria-hidden="true">◆</div>
+        <p class="footer__note">
+          <!--
+            ✏️ Messaggio finale opzionale
+          -->
+          Con tutto il nostro amore, vi aspettiamo.
+        </p>
+      </div>
+    </footer>
+
+  </main><!-- /landing -->
+
+  <script src="script.js" defer></script>
+</body>
+</html>
